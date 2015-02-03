@@ -13,10 +13,13 @@ public class OI {
     
     boolean invertDriveJoystickSignal = true;
     boolean invertTurnJoystickSignal = true;
+    boolean invertArmJoystickSignal = true;
     private final Joystick driveStick = new Joystick(RobotMap.JOY_ARCADE_DRIVE_MOVE_AXIS);
+    private final Joystick armStick = new Joystick(RobotMap.JOY_ARM_MOVE_AXIS);
     
     Button btnLStick = new JoystickButton(driveStick, 11),
-           btnRStick = new JoystickButton(driveStick, 12);
+           btnRStick = new JoystickButton(driveStick, 12),
+           btnArmStick = new JoystickButton(armStick, 12);
    
 
 public double getDriveStickValue() {
@@ -44,4 +47,18 @@ public double getDriveStickValue() {
         }
         
  }
+ 
+ public double getArmStickValue() {
+     System.out.println("In GetArmStick");
+        if (invertArmJoystickSignal)
+        {
+            return armStick.getY() * -1;
+        }
+        else
+        {
+            return armStick.getY();
+        }
+        //.getRawAxis(RobotMap.JOY_ARCADE_DRIVE_MOVE_AXIS)
+    }
+
 }

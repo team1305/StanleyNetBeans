@@ -12,8 +12,14 @@ public class RobotMap {
     public static final int PWM_RIGHT_DRIVE_MOTOR = 3;
    // public static final int PWM_RIGHT_FRONT_DRIVE_MOTOR = 3;
  //   public static final int PWM_RIGHT_REAR_DRIVE_MOTOR = 4;
+    public static final int PWM_UPPER_ARM_MOTOR = 5;
+    public static final int RELAY_COMPRESSOR = 1;
+    
+    public static final int RELAY_COMPRESSOR_SWITCH = 6;
     
         //Joystick Button Mappings
    public static final int JOY_ARCADE_DRIVE_TURN_AXIS = 3;
    public static final int JOY_ARCADE_DRIVE_MOVE_AXIS = 1;
+   public static final int JOY_ARM_MOVE_AXIS = 1;
+   
 }

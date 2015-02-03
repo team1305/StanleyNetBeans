@@ -14,6 +14,8 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.team1305.Stanley.commands.CommandBase;
 import org.team1305.Stanley.commands.ExampleCommand;
+import org.team1305.Stanley.subsystems.BackgroundCompressor;
+        
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -25,6 +27,7 @@ import org.team1305.Stanley.commands.ExampleCommand;
 public class Stanley extends IterativeRobot {
 
     Command autonomousCommand;
+    BackgroundCompressor compressor;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -33,7 +36,7 @@ public class Stanley extends IterativeRobot {
     public void robotInit() {
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
-
+        compressor = BackgroundCompressor.getInstance();
         // Initialize all subsystems
         CommandBase.init();
     }
